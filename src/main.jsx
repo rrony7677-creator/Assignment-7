@@ -8,6 +8,7 @@ import Friendpage from './pages/Friendpage';
 import Stats from './pages/Stats';
 import CallList from './pages/CallList';
 import ErrorPage from './pages/ErrorPage';
+import CallProvider from './context/CallContext';
 
 
 
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
- <RouterProvider router={router} />,
+<CallProvider>
+   <RouterProvider router={router} />,
+</CallProvider>
   </StrictMode>,
 )

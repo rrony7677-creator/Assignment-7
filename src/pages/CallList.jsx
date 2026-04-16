@@ -1,11 +1,12 @@
 // import React from 'react';
-import { useState } from 'react';
+import { useContext,  } from 'react';
 import { FaFileAlt, FaUserClock } from 'react-icons/fa';
 import { FcVideoCall } from 'react-icons/fc';
 import { FiPhoneCall } from 'react-icons/fi';
 import { MdOutlineTextsms } from 'react-icons/md';
 import { RiDeleteBin6Fill } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
+import { CallContext } from '../context/CallContext';
 
 
 
@@ -20,17 +21,9 @@ const expectedCall = calls.find((call) => call.id === parseInt(id));
 console.log(expectedCall);
 
 
-const [storeCallList,setStoreCallList] = useState([]);
+const {handleCall,storeCallList} = useContext(CallContext);
+// console.log(handleCall);
 
-const handleCall = (id)=>{
-
-const isExist =  storeCallList.find((call)=>call.id===id);
-if(isExist){
-alert("The call is already added");}
-else{setStoreCallList([...storeCallList,id])}
-
-console.log(id,storeCallList);
-}
 
 
     return (
@@ -101,7 +94,7 @@ console.log(id,storeCallList);
 <h2 className="font-bold mb-3">Quick Check-in</h2>
     <div className=" justify-center items-center gap-10 grid grid-cols-1 md:grid-cols-3">
       <div className="text-center cursor-pointer group  bg-gray-50 h-[50%] w-50">
-        <button className=" btn btn-dash p-4 rounded-full " onClick={()=>handleCall(id)} ><span><FiPhoneCall /></span><span className="text-sm mt-1 font-bold">Call</span></button>
+        <button className=" btn btn-dash p-4 rounded-full " onClick={()=>handleCall(expectedCall)} ><span><FiPhoneCall /></span><span className="text-sm mt-1 font-bold">Call</span></button>
         {/* <p className="text-sm mt-1 font-bold">Call</p> */}
       </div>
 
