@@ -21,7 +21,7 @@ const expectedCall = calls.find((call) => call.id === parseInt(id));
 console.log(expectedCall);
 
 
-const {handleCall,storeCallList} = useContext(CallContext);
+const {handleActivity,storeCallList} = useContext(CallContext);
 // console.log(handleCall);
 
 
@@ -94,16 +94,16 @@ const {handleCall,storeCallList} = useContext(CallContext);
 <h2 className="font-bold mb-3">Quick Check-in</h2>
     <div className=" justify-center items-center gap-10 grid grid-cols-1 md:grid-cols-3">
       <div className="text-center cursor-pointer group  bg-gray-50 h-[50%] w-50">
-        <button className=" btn btn-dash p-4 rounded-full " onClick={()=>handleCall(expectedCall)} ><span><FiPhoneCall /></span><span className="text-sm mt-1 font-bold">Call</span></button>
+        <button className=" btn btn-dash p-4 rounded-full " onClick={()=>handleActivity(expectedCall,"call")} ><span><FiPhoneCall /></span><span className="text-sm mt-1 font-bold">Call</span></button>
         {/* <p className="text-sm mt-1 font-bold">Call</p> */}
       </div>
 
       <div className="text-center cursor-pointer group  bg-gray-50 h-[50%] w-50">
-        <button className="btn btn-dash p-4 rounded-full "><span><MdOutlineTextsms /></span> <span className="text-sm mt-1 font-bold">Text</span></button>
+        <button className="btn btn-dash p-4 rounded-full "onClick={()=>handleActivity(expectedCall,"text")}><span><MdOutlineTextsms /></span> <span className="text-sm mt-1 font-bold">Text</span></button>
       
       </div>
       <div className="text-center cursor-pointer group  bg-gray-50 h-[50%] w-50  ">
-   <button className="btn btn-dash  p-4 rounded-full "><span><FcVideoCall /></span> <span className="text-sm mt-1 font-bold ">Vedio</span></button>
+   <button className="btn btn-dash  p-4 rounded-full "onClick={()=>handleActivity(expectedCall,"vedio")}><span><FcVideoCall /></span> <span className="text-sm mt-1 font-bold ">Vedio</span></button>
         
       </div>
     </div>

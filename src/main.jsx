@@ -9,6 +9,7 @@ import Stats from './pages/Stats';
 import CallList from './pages/CallList';
 import ErrorPage from './pages/ErrorPage';
 import CallProvider from './context/CallContext';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -46,6 +47,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 <CallProvider>
    <RouterProvider router={router} />,
+     <ToastContainer />
 </CallProvider>
   </StrictMode>,
 )
