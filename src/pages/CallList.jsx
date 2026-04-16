@@ -20,8 +20,6 @@ console.log(expectedCall);
 
 
 
-
-
     return (
        <div className="container mx-auto p-6 bg-white shadow-lg rounded-xl">
   
@@ -93,7 +91,6 @@ console.log(expectedCall);
         <button className=" btn btn-dash p-4 rounded-full "><span><FiPhoneCall /></span><span className="text-sm mt-1 font-bold">Call</span></button>
         {/* <p className="text-sm mt-1 font-bold">Call</p> */}
       </div>
-
 
       <div className="text-center cursor-pointer group  bg-gray-50 h-[50%] w-50">
         <button className="btn btn-dash p-4 rounded-full "><span><MdOutlineTextsms /></span> <span className="text-sm mt-1 font-bold">Text</span></button>

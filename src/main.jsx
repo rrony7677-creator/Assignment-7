@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import Friendpage from './pages/Friendpage';
 import Stats from './pages/Stats';
 import CallList from './pages/CallList';
-// import ErrorPage from './pages/ErrorPage';
+import ErrorPage from './pages/ErrorPage';
 
 
 
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     }
   
   ],
-  // errorElement:<ErrorPage></ErrorPage>
+  errorElement:<ErrorPage></ErrorPage>
   },
 
 
