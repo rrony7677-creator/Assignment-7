@@ -36,7 +36,7 @@ const filteredList =storeCallList.filter(item=>{if(activeFilter === 'all')
 <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-100"></div>
 
 {storeCallList.length === 0 ? (
-    <p className="text-center text-gray-500 py-10">No activities recorded yet.</p>
+    <p className="text-center font-bold container mx-auto items-center justify-center text-4xl text-gray-500 py-35">No activities recorded yet.</p>
 ) : (
 filteredList.map((item, index) => (
 <div key={index} className="flex items-start gap-6 relative group">

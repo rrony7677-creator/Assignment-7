@@ -21,7 +21,7 @@ const expectedCall = calls.find((call) => call.id === parseInt(id));
 console.log(expectedCall);
 
 
-const {handleActivity,storeCallList} = useContext(CallContext);
+const {handleActivity} = useContext(CallContext);
 // console.log(handleCall);
 
 
