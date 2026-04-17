@@ -13,7 +13,7 @@ const Footer = () => {
     </div>
 
     <div className ="social space-y-2">
-        <div><h2 className="text-xl mb-[15px] font-bold">Social Link</h2></div>
+        <div><h2 className="text-xl mb-3.75 font-bold">Social Link</h2></div>
         <div className="flex gap-7 items-center justify-center mb-10">
             <p><FaFacebook /></p>
             <p><FaInstagram/></p>
